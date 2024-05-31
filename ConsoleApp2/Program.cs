@@ -290,6 +290,54 @@ namespace MyApplication
             Console.WriteLine(string.Join(",", reqemler_desc)); //azalan sira
 
 
+     //1
+      List<string> adlar = new List<string> { "Sofiya", "Yasmin", "Shovket", "Fidan", "Viktoriya" };
+      //Console.Writeline(string.Join(",", adlar));
+      adlar.Add("Feride"); 
+      //Console.Writeline(string.Join(",", adlar));
+      //2
+      List<int> reqemler = new List<int> { 1,2,3,4,5,6,7,8,9,0 }; 
+      //Console.Writeline(string.Join(",", reqemler));
+      reqemler.Remove(0); 
+      //Console.Writeline(string.Join(",", reqemler));
+      //3
+      ArrayList mixlist = new ArrayList() { "Sofiya", "Yasmin",1,2,3 };
+      //Console.Writeline(string.Join(",", mixlist));
+      //4
+      ArrayList intlist = new ArrayList() { 1,2,3,4,5,6,7 };
+      //Console.Writeline(string.Join(",", intlist));
+      intlist.Add(8)
+      //Console.Writeline(string.Join(",", intlist)); 
+      //5
+      Dictionary<string, int> Telebeler = new Dictionary<string, int>() {
+                                  {"Ferhad", 17},
+                                  {"Fazil", 18},
+                                {"Famil", 19},
+                                  {"Ismayil", 20},
+                                {"Serxan", 19}  }; 
+         foreach(KeyValuePair<string, int> i in Telebeler)
+          {
+              Console.WriteLine("{0} and {1}", i.Key, i.Value);
+          }
+      //6
+      string element = Telebeler.First(x => x.Value == value);
+
+	  Telebeler.Remove(element.Key);
+               foreach(KeyValuePair<string, int> i in Telebeler)
+          {
+              Console.WriteLine("{0} and {1}", i.Key, i.Value);
+          }
+      //7
+      SortedList kitablar = new SortedList() {{"Paradise Lost", "John Milton"}
+	    {"The Raven", "Edgar Allan Poe"}
+	    {"The Divine Comedy", "Dante Alighieri"}}; 
+        
+        kitablar.Add("The Mountains Of Madness", "H.P.Lovecraft");
+        for (int x = 0; x < kitablar.Count; x++)
+      {
+          Console.WriteLine("{0} and {1}", 
+                      kitablar.GetKey(x), 
+                 kitablar.GetByIndex(x));
         }
     }
 }
